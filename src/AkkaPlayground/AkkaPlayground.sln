@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityMailbox", "PriorityMailbox\PriorityMailbox.csproj", "{90B34EC6-8116-4BCE-A8FB-7FFEA42BBE43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{4DCB7172-8D2F-4307-90B8-97A4D4008251}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90B34EC6-8116-4BCE-A8FB-7FFEA42BBE43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B34EC6-8116-4BCE-A8FB-7FFEA42BBE43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B34EC6-8116-4BCE-A8FB-7FFEA42BBE43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B34EC6-8116-4BCE-A8FB-7FFEA42BBE43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DCB7172-8D2F-4307-90B8-97A4D4008251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DCB7172-8D2F-4307-90B8-97A4D4008251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DCB7172-8D2F-4307-90B8-97A4D4008251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DCB7172-8D2F-4307-90B8-97A4D4008251}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01A81298-6ED6-4357-836A-26B6D6DB46D5}
+	EndGlobalSection
+EndGlobal
