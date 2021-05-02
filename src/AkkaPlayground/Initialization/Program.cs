@@ -25,23 +25,6 @@ namespace Initialization
             master.Tell(new Kill());
             await master.Ask(new Print());
 
-            //Console.WriteLine("SupervisorA - OneForAllStrategy");
-            //Console.WriteLine("Input a text and press [Enter].");
-            //Console.WriteLine("Special 'Commands': restart, resume, getdata, geterror.");
-            //Console.WriteLine(" ");
-
-            //while (true)
-            //{
-            //    var val = Console.ReadLine();
-            //    if (string.IsNullOrEmpty(val)) break;
-
-            //    supervisorA.Tell(new Dns.Command("1", val));
-            //}
-
-
-            //Console.WriteLine("SupervisorB - AllForOneStrategy");
-            //Console.WriteLine("Sending command 'restart' to SupervisorB. All children will be restarted.");
-            //supervisorB.Tell(new Dns.Command("1", "restart"));
             Console.ReadKey();
         }
     }
