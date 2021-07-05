@@ -10,12 +10,12 @@ namespace HoconSubstitution
         {
             var dic = new Dictionary<string, string>
             {
-                {"akka.persistence.journal.redis.connection-string", "injected in runtime"}
+                {"redis-connection-string-secrets", "injected in runtime"}
 
             };
 
             var config = ConfigurationLoader.LoadConfig("akka.conf", dic);
-            Console.WriteLine($"{config.GetValue("akka.persistence.journal.redis.connection-string")}");
+            Console.WriteLine($"akka.persistence.journal.redis.connection-string: {config.GetValue("akka.persistence.journal.redis.connection-string")}");
                 
             Console.ReadKey();
         }

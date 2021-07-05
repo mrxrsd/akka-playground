@@ -4,17 +4,23 @@ using Core.Messages.Common;
 
 namespace Schedule
 {
-    public class MasterActor : ReceiveActor
+    public class MasterActor : ReceiveActor, IWithTimers
     {
 
         public MasterActor()
         {
-            Context.System.Scheduler.ScheduleTellRepeatedly(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(2), Context.Self, new WakeUp(""), Self);
 
             Receive<WakeUp>(up =>
             { 
                 Console.WriteLine("Hi!");
             });
         }
+
+        protected override void PreStart()
+        {
+            Timers.StartPeriodicTimer("wake-up",new WakeUp(""), TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(2));
+        }
+
+        public ITimerScheduler Timers { get; set; }
     }
 }
