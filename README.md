@@ -6,6 +6,7 @@ Several samples of akka.net features, patterns and tricks.
 - Priority Mailbox 
 - Error Handling
 - Schedule Messages
+- Hocon Substitution (dynamic injected values in startup)
 
 # Patterns
 
