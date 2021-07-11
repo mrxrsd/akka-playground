@@ -20,9 +20,15 @@ namespace AtLeastOnce
             catch (Exception ex)
             {
                 Console.WriteLine("ERROR!!!!");
+                throw new DuplicateKeyException();
             }
 
             return true;
         }
     }
+}
+
+public class DuplicateKeyException : Exception
+{
+
 }

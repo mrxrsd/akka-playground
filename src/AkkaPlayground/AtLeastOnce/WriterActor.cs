@@ -19,9 +19,17 @@ namespace AtLeastOnce
 
         private async Task InsertHandler(ReliableDeliveryEnvelope<Insert> f)
         {
-            await _dbContext.Write(f.Message.Id, f.Message.Msg);
-            Context.Sender.Tell(new ReliableDeliveryAck(f.MessageId));
-            Console.WriteLine($"Inserted {f.Message.Id}");
+            try
+            {
+                await _dbContext.Write(f.Message.Id, f.Message.Msg);
+                Context.Sender.Tell(new ReliableDeliveryAck(f.MessageId));
+                Console.WriteLine($"Inserted {f.Message.Id}");
+            }
+            catch (DuplicateKeyException ex)
+            {
+                // already inserted
+                Context.Sender.Tell(new ReliableDeliveryAck(f.MessageId));
+            }
         }
     }
 }
